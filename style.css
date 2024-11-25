@@ -1,0 +1,190 @@
+@font-face{
+    font-family: Poppins;
+    src: url(./Poppins/Poppins-Regular.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+*::selection{
+    background-color: #ffffff00;
+    /* troleador cara */
+}
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #20ff45;
+    background-color: #549edf;
+}
+
+#calculadora {
+    max-width: 360px;
+    background-color: #2b2b2b50;
+    backdrop-filter: blur(50px);
+    box-shadow: 2px 3px 20px black;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+#videofundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#videofundo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#display {
+    font-size: 22px;
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: rgb(0, 22, 150);
+    background-color: #ffffff;
+    border: none;
+    box-sizing: border-box;
+}
+
+button:not(#botaoDarkMode) {
+    width: calc(25% - 12px);
+    height: 50px;
+    font-size: 20px;
+    background-color: #0f8bf7;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+    color: rgb(255, 255, 255);
+    float: left;
+}
+
+#calculadora button:hover {
+    cursor: pointer;
+    background-color: #00ff37b9;
+    transition: 0.05s;
+    box-shadow: 0 0 7px rgb(255, 255, 255);
+    
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header nav li{
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+header nav li button{
+    background-color: #549edf;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+header nav li button:hover{
+    background-color: #2a7dc5;
+    cursor: pointer;
+    
+}
+
+
+#calculadora button:active{
+    transform: scale(0.9);
+}
+
+#calculadora .operador{
+    background-color: rgb(183, 29, 255);
+}
+
+.operador:hover {
+    background-color: #ff0000b9;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+
+/* ---------------Modo Escuro-------------- */
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode #display {
+    font-size: 22px;
+    text-align: right;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #001696;
+    border: none;
+    box-sizing: border-box;
+}
+
+.dark-mode button:not(#botaoDarkMode) {
+    width: calc(25% - 12px);
+    height: 50px;
+    font-size: 20px;
+    background-color: #0a385f;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px 5px;
+    color: rgb(255, 255, 255);
+    float: left;
+}
+
+.dark-mode #calculadora button:hover {
+    cursor: pointer;
+    background-color: #0b521ab9;
+    transition: 0.05s;
+    box-shadow: 0 0 7px rgb(255, 255, 255);
+    
+}
+
+.dark-mode #calculadora .operador{
+    background-color: rgb(153, 31, 72);
+}
